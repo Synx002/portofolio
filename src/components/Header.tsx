@@ -34,7 +34,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-4">
             <a href="/#projects" className="hover:text-gray-500">Work</a>
             <a href="/#contact" className="hover:text-gray-500">Contact</a>
           </div>

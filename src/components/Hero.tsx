@@ -9,14 +9,14 @@ const Hero: React.FC = () => {
             <img 
                 src="https://preview.redd.it/s1-spoilers-what-is-your-opinion-of-silco-v0-9jgndqriq2za1.jpg?width=640&crop=smart&auto=webp&s=10221a76d6317775eb681492b7c3df47b3bcc7c4" 
                 alt="Silco" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-lg"
             />
             </div>
 
             {/* Teks */}
-            <div className="text-left md:px-6 whitespace-normal">
-                <h1 className="text-4xl md:text-7xl font-normal mb-6 leading-normal">If you’re reading this, call me Syam</h1>
-                <p className="text-base md:text-xl leading-normal">
+            <div className="text-left whitespace-normal">
+                <h1 className="text-base md:text-4xl font-normal mb-6 leading-normal">If you’re reading this, call me Syam</h1>
+                <p className="text-base leading-normal">
                     You’ve gotten this far and now I consider us friends. It’s nice to meet you! I'm a designer passionate about creating visuals that tell stories and designing brand experiences that improve everyday lives, especially within the direct-to-consumer market. Previously, I was a designer at Herman-Scheer. Currently, I'm a freelance brand designer and creative lead at Hyper. 
 
                     I come from a very multidisciplinary background (I studied sustainable environmental design at UC Berkeley and took some wacky classes - I know how to calculate the rate at which energy flows through rooms, how to sustainably retrofit old buildings, and how to make maps with programs like ArcGIS!) but my specialties lie within brand design.

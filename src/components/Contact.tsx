@@ -42,10 +42,17 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-100">
+    <section id="contact" className="py-20 ">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8 text-center">Hubungi Saya</h2>
-        <div className="max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+          <div className="flex flex-col gap-6">
+            <h1 className='text-5xl'>Let's Talk</h1>
+            <div className="flex w-sm flex-col gap-3">
+              <p>If you're interested in working together, please fill out this super quick form and tell me about your project scope/deliverables, timeline, and budget! The more detailed the better.</p>
+              <p>I specialize in branding D2C companies primarily for Gen Z/Millenials, but am also open to other projects such as merch design, book cover design (please), editorial posters, and more! If you just want to say hi, that's totally welcome too.</p>
+              <p>I do my best to get back to everyone but due to volume of inquiries I prioritize responding to projects that I feel are a good fit!</p>
+            </div>
+          </div>
           {submitMessage && (
             <div className={`p-4 mb-4 rounded ${submitMessage.includes('dikirim') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
               {submitMessage}
@@ -53,47 +60,47 @@ const Contact: React.FC = () => {
           )}
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="name" className="block text-gray-700 mb-2">Nama</label>
+              <label htmlFor="name" className="block text-gray-700 mb-2">your cool name *</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border bg-gray-100  rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
+              <label htmlFor="email" className="block text-gray-700 mb-2">your lovely email *</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border bg-gray-100 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="message" className="block text-gray-700 mb-2">Pesan</label>
+              <label htmlFor="message" className="block text-gray-700 mb-2">why do you want to work together ?</label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border bg-gray-100 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               ></textarea>
             </div>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition duration-300 disabled:bg-blue-400"
+              className="w-[100px] bg-[#000] text-white py-3 rounded-sm hover:bg-blue-700 transition duration-300 disabled:bg-blue-400"
             >
-              {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
+              {isSubmitting ? 'sending...' : 'send'}
             </button>
           </form>
         </div>
