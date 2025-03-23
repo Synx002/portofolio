@@ -1,9 +1,10 @@
-import React from 'react'
-
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="w-full text-center p-4 bg-white text-black border-t text-sm">
+      &copy; {new Date().getFullYear()} Mohammad Syam Caturputra. All rights
+      reserved.
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

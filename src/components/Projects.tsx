@@ -40,21 +40,24 @@ const Projects: React.FC = () => {
       {/* Project List */}
       <div className="space-y-12">
         {projects.map((project, index) => (
-          <div key={project.id} className="grid grid-cols-12 gap-4">
+          <div
+            key={project.id}
+            className="grid grid-cols-1 md:grid-cols-12 gap-4"
+          >
             {/* Numbering */}
-            <div className="col-span-6 text-lg font-semibold">
+            <div className="md:col-span-6 text-lg font-semibold md:text-left">
               {String(index + 1).padStart(2, "0")}.
             </div>
 
             {/* Image & Details */}
-            <div className="col-span-6">
-                <Link to={`/project/${project.id}`}>
+            <div className="md:col-span-6 text-right md:text-left">
+              <Link to={`/project/${project.id}`}>
                 <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-100 rounded-lg object-cover"
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-auto rounded-lg object-cover"
                 />
-                </Link>
+              </Link>
               <p className="text-sm text-gray-500 mt-2">{project.category}</p>
               <h3 className="text-lg font-bold">{project.title}</h3>
             </div>
