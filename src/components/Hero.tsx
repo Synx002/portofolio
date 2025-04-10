@@ -12,12 +12,12 @@ const Hero: React.FC = () => {
             alt="Silco"
             className="w-full h-full object-cover rounded-lg"
           /> */}
-          <Lanyard />
+          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
         </div>
 
         {/* Teks */}
         <div className="text-left whitespace-normal">
-          <h1 className="text-base md:text-4xl font-normal mb-6 leading-normal">
+          <h1 className="text-4xl md:text-4xl font-normal mb-6 leading-normal">
             If you’re reading this, call me Syam
           </h1>
           <p className="text-base leading-normal">
